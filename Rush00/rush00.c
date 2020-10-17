@@ -1,4 +1,4 @@
-void ft_putchar(int a);
+void ft_putchar(char a);
 
 void rush (int a, int b)
 {
@@ -13,23 +13,23 @@ void rush (int a, int b)
 		{
 			if ((i == 0 || i == b-1) && (j == 0 || j == a-1))
 			{
-				write(1, "o", 1);
+				ft_putchar('o');
 			}
 				else if(i == 0 || i == b-1)
 			{
-				write(1, "-", 1);
+				ft_putchar('-');
 			}
 			else if(j == 0 || j == a-1)
 			{
-				write(1, "|", 1);
+				ft_putchar('|');
 			}
 			else
 			{
-				write(1, " ", 1);
+				ft_putchar(' ');
 			}
 			j++;
 		}
-		write(1, "\n", 1);
+		ft_putchar('\n');
 		i++;
 	}
 }

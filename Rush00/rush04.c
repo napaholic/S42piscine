@@ -6,7 +6,7 @@
 /*   By: kachoi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 15:15:23 by kachoi            #+#    #+#             */
-/*   Updated: 2020/10/17 17:08:38 by kachoi           ###   ########.fr       */
+/*   Updated: 2020/10/17 21:52:24 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ void	rush04(int a, int b)
 
 void	get_location04(int a, int b, int i, int j)
 {
-	if ((i == 0 && j == 0) || (i == b - 1 && j == a - 1))
+	if ((i == 0 && j == 0) || (i == b - 1 && j == a - 1 && i != 0 && j != 0))
 	{
-		ft_putchar('A');
+		ft_putchar('/');
 	}
 	else if ((i == 0 && j == a - 1) || (i == b - 1 && j == 0))
 	{
-		ft_putchar('C');
+		ft_putchar('\\');
 	}
 	else if ((i == 0 || i == b - 1) || (j == 0 || j == a - 1))
 	{
-		ft_putchar('B');
+		ft_putchar('*');
 	}
 	else
 	{

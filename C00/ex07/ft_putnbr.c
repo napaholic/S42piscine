@@ -26,10 +26,10 @@ void ft_putnbr(int nb)
 	
 	while(a[i])
 	{
-		write(1, &a[i++], 1);
+		write(1, &a[i++]+48, 1);
 	}
 
-	write(1, '\n', 1);
-	write(1, 'c',1);	
+	write(1, "\n", 1);
+	write(1, "c", 1);	
 	printf("%c",b);
 }

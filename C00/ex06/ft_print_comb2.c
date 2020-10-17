@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 07:03:21 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/15 08:10:46 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/17 20:47:59 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ int recur(char a, char b, char c, char d){
 	}
 	else if(c=='9'&&d=='9')
 	{
-		return recur (a, b+1, a, b+2);
+		if(b+1 == '9')
+			return recur (a, b+1, a+1, '0');
+		else
+			return recur (a, b+1, a, b+2);
 	}
 	else if(d=='9')
 	{

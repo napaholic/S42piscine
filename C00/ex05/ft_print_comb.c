@@ -34,8 +34,7 @@ int recur(char a, char b, char c)
 	{
 		return 0;
 	}
-	write(1,",",1);
-	write(1," ",1);
+	write(1,", ",2);
 	if(c==57)
 	{
 		if(b+1=='9'){

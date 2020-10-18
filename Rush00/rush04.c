@@ -6,7 +6,7 @@
 /*   By: kachoi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/17 15:15:23 by kachoi            #+#    #+#             */
-/*   Updated: 2020/10/17 23:40:28 by jiyepark         ###   ########.fr       */
+/*   Updated: 2020/10/18 20:26:41 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,15 @@ void	get_location04(int a, int b, int i, int j)
 {
 	if ((i == 0 && j == 0) || (i == b - 1 && j == a - 1 && i != 0 && j != 0))
 	{
-		ft_putchar('/');
+		ft_putchar('A');
 	}
 	else if ((i == 0 && j == a - 1) || (i == b - 1 && j == 0))
 	{
-		ft_putchar('\\');
+		ft_putchar('C');
 	}
 	else if ((i == 0 || i == b - 1) || (j == 0 || j == a - 1))
 	{
-		ft_putchar('*');
+		ft_putchar('B');
 	}
 	else
 	{

@@ -6,7 +6,7 @@ void show_arr(char arr[9], int n);
 
 int main()
 {
-	ft_print_combn(2);
+	ft_print_combn(7);
 }
 
 void ft_print_combn(int n) //2
@@ -23,6 +23,7 @@ void ft_print_combn(int n) //2
 		start_set--;
 		i--;
 	}
+	show_arr(arr, n);
 	recur(arr, n, 9 - n); //arr, 2, 7index
 }
 
@@ -40,7 +41,7 @@ int recur(char arr[], int n, int now)
 		{
 			set_eacharr(arr, now);
 			show_arr(arr, n);
-			return recur(arr, n, now);
+			return recur(arr, n, now - 1);
 			//만약 n이아니면 해당인덱스 -1 위치 1올리고 뒤에 다시 세팅
 		}
 	}
@@ -48,7 +49,6 @@ int recur(char arr[], int n, int now)
 	{
 		if (now != 8)
 		{
-			show_arr(arr, n);
 			return recur(arr, n, now + 1);
 		}
 		else

@@ -9,55 +9,48 @@ void	show_arr(char a_num[9], int cover_num);
 
 int		main ()
 {
-	ft_print_combn(6);
+	ft_print_combn(1);
 }
 
-void	ft_print_combn(int n)
+void	ft_print_combn(int n)//n=6
 {
 	int i;
 	char a_num[9];
 	i = 0;
-	while (i < n)
+	while (i < n)//i=0, n=6
 	{
-		if (i == n-1)
-			a_num[i] = '1';
-		else
-			a_num[i] = '0';
+		a_num[9-n] = i;
 		i++;
 	}
 	recur(a_num, n);
 }
 
-void	recur(char a_num[9], int covereage)
+void	recur(char a_num[9], int n)//cover =1
 {
-	if (max_check(a_num, covereage) == 0)
-		return;
-	else
-		return recur(a_num, covereage);
+	
+	a_num[9] += 1;
 }
 
-int		max_check(char a_num[9], int covereage)
+int		max_check(char a_num[9], int n)
 {
 	int max_num;
 	int arr_num;
-
-	arr_num = covereage;
-	max_num = 9;
-	while (--covereage >= 0)
+	
+	arr_num = 8;//arr_num = 1
+	max_num = 9-n;
+	while(arr_num-- > max_num)
 	{
-		if (a_num[covereage] != max_num--)
-		{
-			eachnum_up(a_num, covereage, arr_num);
-			return (1);
-		}
+		fg
 	}
+	
 	return (0);
 }
 
-void	eachnum_up(char a_num[9], int index_num, int cover_num)
+void	eachnum_up(char a_num[9], int index_num, int cover_num)//5,6
 {
-	a_num[index_num] += 1;
-	while (index_num++ != cover_num)
+	show_arr(a_num, cover_num);
+	a_num[index_num] += 1;//a_num[5]
+	while (++index_num != cover_num)//6 !=6
 	{
 		a_num[index_num] += 1;
 	}

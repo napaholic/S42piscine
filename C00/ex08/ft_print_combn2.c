@@ -28,7 +28,8 @@ void ft_print_combn(int n) //2
 
 int recur(char arr[], int n, int now)
 {
-	if (arr[now] == now + 49) //각자리가 최대값일때
+	if (arr[now] == now + 49) //각자리가 최대값일때dds
+
 	{
 		if (now == 9 - n) //만약 그 자리가 n일때
 		{

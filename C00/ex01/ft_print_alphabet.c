@@ -6,23 +6,20 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 23:02:18 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/15 03:35:40 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/19 16:37:47 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void){
-
-	char a;
+void	ft_print_alphabet(void)
+{
+	char	a;
 
 	a = 'a';
-
 	while (a <= 'z')
 	{
 		write(1, &a, 1);
-
 		a++;
-
 	}
 }

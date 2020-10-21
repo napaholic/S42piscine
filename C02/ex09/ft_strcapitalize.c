@@ -6,11 +6,24 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:58:00 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/21 23:15:53 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/22 00:04:22 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		isnotchar
+int		isupper(char c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
+}
+
+int		islower(char c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 
 char	*ft_strcapitalize(char *str)
 {
@@ -19,7 +32,7 @@ char	*ft_strcapitalize(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z') && str[i - 1] )
+		if (isupper(str[i]) && isupper(str[i - 1]) && islower(str[i - 1))
 	}
 }
 

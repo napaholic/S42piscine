@@ -6,14 +6,14 @@
 /*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 21:56:21 by mjay              #+#    #+#             */
-/*   Updated: 2020/10/20 21:58:00 by mjay             ###   ########.fr       */
+/*   Updated: 2020/10/21 12:16:43 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b);
+void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int i;
-	
+
 	i = *a % *b;
 	*a = *a / *b;
 	*b = i;

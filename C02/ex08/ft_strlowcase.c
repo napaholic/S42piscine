@@ -6,11 +6,11 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:49:25 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:57:06 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/22 04:26:04 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int i;
 

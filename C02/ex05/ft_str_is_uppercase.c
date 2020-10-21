@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:39:07 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:42:01 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/22 04:16:01 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int		ft_str_is_uppercase(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			return (1);
+		if (!(str[i] >= 'A' && str[i] <= 'Z'))
+			return (0);
 	}
-	return (0);
+	return (1);
 }

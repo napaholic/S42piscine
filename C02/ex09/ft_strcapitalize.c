@@ -6,32 +6,42 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:58:00 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 00:18:44 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/22 06:40:40 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		isupper(char c)
+int		alphanumeric(char c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if ('A' <= c && c <= 'Z')
 		return (1);
-	else
-		return (0);
+	if ('a' <= c && c <= 'z')
+		return (1);
+	if ('0' <= c && c <= '9')
+		return (1);
+	return (0);
 }
 
-int		islower(char c)
+int		firstchk(char *str, int idx)
 {
-	if (c >= 'a' && c <= 'z')
+	if (idx == 0)
 		return (1);
-	else
-		return (0);
+	return (!alphanumeric(str[idx - 1]));
 }
 
-int		isalpha(char c)
+void	lowtoup(char *str, int idx)
 {
-	if (isupper(c) || islower(c))
-		return (1);
-	else
-		return (0);
+	if ('a' <= str[idx] && str[idx] <= 'z')
+	{
+		str[idx] -= 32;
+	}
+}
+
+void	uptolow(char *str, int idx)
+{
+	if ('A' <= str[idx] && str[idx] <= 'Z')
+	{
+		str[idx] += 32;
+	}
 }
 
 char	*ft_strcapitalize(char *str)
@@ -41,12 +51,11 @@ char	*ft_strcapitalize(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if (i > 0)
-		{
-			if (islower(str[i]) && !isupper(str[i - 1]) && !islower(str[i - 1]))
-				str[i] -= 32;
-			if (isupper(str[i]) && isalpha(str[i - 1]))
-				str[i] += 32;
-		}
+		if (firstchk(str, i))
+			lowtoup(str, i);
+		else
+			uptolow(str, i);
+		i++;
 	}
+	return (str);
 }

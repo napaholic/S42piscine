@@ -6,9 +6,11 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 00:19:41 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 01:15:06 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/22 06:54:26 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int					ft_strlen(char *str)
 {
@@ -25,7 +27,7 @@ unsigned	int		ft_strlcpy(char *dest, char *src, unsigned int size)
 	unsigned int i;
 	unsigned int j;
 
-	i = ft_strlen(str);
+	i = ft_strlen(src);
 	if (i + 1 < size)
 	{
 		j = -1;

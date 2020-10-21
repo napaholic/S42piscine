@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 18:49:07 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 03:49:25 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/22 02:07:21 by jaewkim           #+#    #+#             */
+/*   Updated: 2020/10/22 02:09:39 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putchar(char c)
 {
-	int index;
+	write(1, &c, 1);
+}
 
-	index = -1;
-	while (src[++index])
-	{
-		dest[index] = src[index];
-	}
-	dest[index] = '\0';
-	return (dest);
+void	*ft_print_memory(void *addr, unsigned int size)
+{
+	ft_putchar(' ');
 }

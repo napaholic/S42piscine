@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:43:22 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/21 22:54:13 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/22 04:16:51 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int		ft_str_is_printable(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if (str[i] >= 32 && str[i] <= 126)
-			return (1);
+		if (!(str[i] >= 32 && str[i] <= 126))
+			return (0);
 	}
-	return (0);
+	return (1);
 }

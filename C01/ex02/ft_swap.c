@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_swqp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 18:49:07 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 03:49:25 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/20 21:44:10 by mjay              #+#    #+#             */
+/*   Updated: 2020/10/22 07:03:05 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_swap(int *a, int *b)
 {
-	int index;
+	int temp;
 
-	index = -1;
-	while (src[++index])
-	{
-		dest[index] = src[index];
-	}
-	dest[index] = '\0';
-	return (dest);
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }

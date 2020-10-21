@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 18:49:07 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 02:06:11 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/22 00:19:41 by jaewkim           #+#    #+#             */
+/*   Updated: 2020/10/22 01:15:06 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int					ft_strlen(char *str)
 {
-	int index;
+	int n;
 
-	index = -1;
-	while (src[++index])
+	n = 0;
+	while (str[n])
+		n++;
+	return (n);
+}
+
+unsigned	int		ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	unsigned int i;
+	unsigned int j;
+
+	i = ft_strlen(str);
+	if (i + 1 < size)
 	{
-		dest[index] = src[index];
+		j = -1;
+		while (++j < i + 1)
+			dest[j] = src[j];
 	}
-	dest[i] = '\0';
-	return (dest);
+	else if (size)
+	{
+		j = -1;
+		while (++j < size - 1)
+			dest[j] = src[j];
+		dest[j] = '\0';
+	}
+	return (i);
 }

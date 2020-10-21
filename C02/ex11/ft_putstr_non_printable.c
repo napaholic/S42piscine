@@ -1,52 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/21 22:58:00 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 00:18:44 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/22 01:15:58 by jaewkim           #+#    #+#             */
+/*   Updated: 2020/10/22 02:03:47 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		isupper(char c)
+#include <unistd.h>
+
+int		print(char c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
 }
 
-int		islower(char c)
+void	mv_char(unsigned char c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	else
-		return (0);
+	char a;
+	char b;
+
+	a = "0123456789abcdef"[c / 16];
+	b = "0123456789abcdef"[c % 16];
+	write(1, "\\", 1);
+	write(1, &a, 1);
+	write(1, &b, 1);
 }
 
-int		isalpha(char c)
-{
-	if (isupper(c) || islower(c))
-		return (1);
-	else
-		return (0);
-}
-
-char	*ft_strcapitalize(char *str)
+void	ft_putstr_non_printable(char *str)
 {
 	int i;
 
 	i = -1;
 	while (str[++i])
 	{
-		if (i > 0)
+		if (print(str[i]))
+			write(1, &str[i], 1);
+		else
 		{
-			if (islower(str[i]) && !isupper(str[i - 1]) && !islower(str[i - 1]))
-				str[i] -= 32;
-			if (isupper(str[i]) && isalpha(str[i - 1]))
-				str[i] += 32;
+			mv_char(str[i]);
 		}
 	}
 }

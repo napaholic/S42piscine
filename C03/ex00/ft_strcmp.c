@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 02:42:46 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 03:03:22 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/24 02:57:14 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@ int		ft_strcmp(char *s1, char *s2)
 	while (*s1 && *s2)
 	{
 		if (*s1 > *s2)
-			return ()
+			return (s1 - s2);
+		else if (*s1 < *s2)
+			return (s2 - s1);
+		else
+			return (0);
 	}
 }

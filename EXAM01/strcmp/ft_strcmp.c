@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 02:42:46 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/24 02:57:14 by mjay             ###   ########.fr       */
+/*   Created: 2020/10/22 16:42:16 by mjay              #+#    #+#             */
+/*   Updated: 2020/10/22 17:34:29 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *2)
 {
-	while (*s1 && *s2)
-	{
-		if (*s1 > *s2)
-			return (s1 - s2);
-		else if (*s1 < *s2)
-			return (s2 - s1);
-		else
-			return (0);
-	}
+
 }

@@ -6,7 +6,7 @@
 /*   By: sungspar <sungspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 13:45:35 by jpyo              #+#    #+#             */
-/*   Updated: 2020/10/24 22:00:08 by sungspar         ###   ########.fr       */
+/*   Updated: 2020/10/25 02:55:25 by sungspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int		ft_start(char *str, int size)
 	if (ft_char_to_int(str, grid))
 	{
 		while (--i >= 0)
-			free(grid[i--]);
+			free(grid[i]);
 		free(grid);
 		return (-1);
 	}
@@ -76,7 +76,7 @@ int		ft_start(char *str, int size)
 		return (-1);
 	print_grid(grid);
 	while (--i >= 0)
-		free(grid[i--]);
+		free(grid[i]);
 	free(grid);
 	return (0);
 }

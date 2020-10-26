@@ -6,7 +6,7 @@
 /*   By: sungspar <sungspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 21:45:32 by sungspar          #+#    #+#             */
-/*   Updated: 2020/10/24 22:33:42 by sungspar         ###   ########.fr       */
+/*   Updated: 2020/10/25 02:54:07 by sungspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_view(int **grid, int row, int col)
 {
-	while (row != 5 || col != 5)
+	while (row || col)
 	{
 		if (row == 0 && col < 5)
 		{

@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   ft_start.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sungspar <sungspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 02:07:21 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/24 20:07:08 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/24 19:41:55 by sungspar          #+#    #+#             */
+/*   Updated: 2020/10/24 19:59:15 by sungspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#ifndef FT_START_H
+# define FT_START_H
 
-void	*ft_print_memory(void *addr, unsigned int size)
-{
-	char *a;
-	a = "asdf";
-	ft_putchar(' ');
-	return (a);
-}
+void	ft_inialize_zero(int **num);
+int		ft_start(char *str, int size);
+
+#endif

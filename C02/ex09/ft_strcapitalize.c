@@ -6,9 +6,11 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 22:58:00 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/22 06:40:40 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/24 20:03:29 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 int		alphanumeric(char c)
 {
@@ -55,7 +57,6 @@ char	*ft_strcapitalize(char *str)
 			lowtoup(str, i);
 		else
 			uptolow(str, i);
-		i++;
 	}
 	return (str);
 }

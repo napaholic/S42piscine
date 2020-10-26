@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   rec_check_start.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sungspar <sungspar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 02:07:21 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/24 20:07:08 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/24 21:50:00 by sungspar          #+#    #+#             */
+/*   Updated: 2020/10/24 22:34:06 by sungspar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#ifndef REC_CHECK_START_H
+# define REC_CHECK_START_H
 
-void	*ft_print_memory(void *addr, unsigned int size)
-{
-	char *a;
-	a = "asdf";
-	ft_putchar(' ');
-	return (a);
-}
+int	check_view(int **grid, int row, int col);
+int	check_overlap_val(int **grid, int row, int col);
+
+#endif

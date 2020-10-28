@@ -6,7 +6,7 @@
 /*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:32:10 by mjay              #+#    #+#             */
-/*   Updated: 2020/10/28 15:56:15 by mjay             ###   ########.fr       */
+/*   Updated: 2020/10/28 22:02:23 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 char	*chkempty(char *str)
 {
-	char *dst;
+	char	*dst;
+
 	dst = str;
 	while (*dst == '\t'
 		|| *dst == '\v'
@@ -23,15 +24,15 @@ char	*chkempty(char *str)
 		|| *dst == '\f'
 		|| *dst == ' ')
 		dst++;
-	return dst;
+	return (dst);
 }
 
 int		ft_atoi(char *str)
 {
 	int		i;
 	int		num;
-	
-	i = 0;
+
+	i = 1;
 	num = 0;
 	str = chkempty(str);
 	while (*str == '-' || *str == '+')
@@ -47,15 +48,4 @@ int		ft_atoi(char *str)
 		str++;
 	}
 	return (i * num);
-}
-
-int main()
-{
-	int num;
-	char *c;
-	char d[] = "$		-----23499834akfl";
-
-	c = d;
-	num = ft_atoi(c);
-	printf("%d", num);
 }

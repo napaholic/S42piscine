@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 10:21:47 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/28 12:31:42 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/28 20:17:47 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strstr(char *str, char *to_find)
 	if (*to_find == '\0')
 		return (str);
 	i = 0;
-	while (str[++i])
+	while (str[i])
 	{
 		if (str[i] == to_find[0])
 		{
@@ -32,6 +32,7 @@ char	*ft_strstr(char *str, char *to_find)
 				j++;
 			}
 		}
+		i++;
 	}
 	return (0);
 }

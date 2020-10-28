@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/25 17:45:16 by mjay              #+#    #+#             */
-/*   Updated: 2020/10/26 23:49:52 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/26 22:58:14 by jaewkim           #+#    #+#             */
+/*   Updated: 2020/10/26 23:11:02 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-char	*ft_strcat(char *dest, char *src)
+int		ft_strlen(char *str)
 {
-	char *tmp;
+	unsigned int i;
 
-	tmp = dest;
-	while (*tmp)
-		tmp++;
-	while (*src)
+	i = 0;
+	while (str[i])
 	{
-		*tmp = *src;
-		tmp++;
-		src++;
+		i++;
 	}
-	*tmp = '\0';
-	return (dest);
+	return (i);
 }

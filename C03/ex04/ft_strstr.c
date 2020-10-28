@@ -6,18 +6,18 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 10:21:47 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/26 22:35:25 by mjay             ###   ########.fr       */
+/*   Updated: 2020/10/28 12:31:42 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int j;
+	unsigned	int		i;
+	unsigned	int		j;
 
-	i = -1;
+	if (*to_find == '\0')
+		return (str);
+	i = 0;
 	while (str[++i])
 	{
 		if (str[i] == to_find[0])

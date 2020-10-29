@@ -6,7 +6,7 @@
 /*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 15:10:53 by mjay              #+#    #+#             */
-/*   Updated: 2020/10/29 15:47:38 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/29 16:04:56 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,14 @@ void	print(char *argv)
 	while (argv[idx])
 	{
 		c = argv[idx];
-		if (alphachk(arf)
+		if (alphachk(c) == 1)
+		{
+			c = mirrorchange(c, 1);
+		}
+		else if (alphachk(c) == 2)
+		{
+			c = mirrorchange(c, 2);
+		}
 		write(1, &c, 1 );
 		idx++;
 	}
@@ -55,7 +62,7 @@ int		main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
-
+		print(argv[1]);
 	}
 	write(1, "\n", 1);
 	return 0;

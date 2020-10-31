@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/24 04:26:57 by mjay              #+#    #+#             */
-/*   Updated: 2020/10/31 16:48:47 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/11/01 01:06:06 by jaewkim           #+#    #+#             */
+/*   Updated: 2020/11/01 01:14:30 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int i;
+#include <unistd.h>
 
-	i = 0;
-	while (*s1 && *s2 && i < n)
+int		main(int ac, char **av)
+{
+	while (**av)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		++s1;
-		++s2;
-		++i;
+		write(1, *av, 1);
+		(*av)++;
 	}
-	if (i == n)
-	{
-		s1--;
-		s2--;
-	}
-	return (*s1 - *s2);
 }

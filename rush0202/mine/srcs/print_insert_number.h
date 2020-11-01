@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   print_insert_number.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 22:46:08 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/11/01 03:27:28 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/10/31 22:49:09 by jeonpark          #+#    #+#             */
+/*   Updated: 2020/11/01 02:40:04 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_prime(int nb)
-{
-	long long i;
-	long long num;
+#ifndef PRINT_INSERT_NUMBER_H
+# define PRINT_INSERT_NUMBER_H
 
-	i = 2;
-	num = nb;
-	if (nb < 2)
-		return (0);
-	while (i * i <= num)
-	{
-		if ((num % i) == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+int	insert_thousands(char *ptr);
+int	insert_digit(char *ptr);
+int	insert_tenth(char *ptr);
+int	insert_tens(char *ptr);
+int	insert_hundreds(char *ptr);
+
+#endif

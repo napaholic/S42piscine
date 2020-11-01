@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 22:46:08 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/11/01 03:27:28 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/11/01 00:12:04 by jeonpark          #+#    #+#             */
+/*   Updated: 2020/11/01 02:41:44 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_prime(int nb)
-{
-	long long i;
-	long long num;
+#ifndef PRINT_H
+# define PRINT_H
 
-	i = 2;
-	num = nb;
-	if (nb < 2)
-		return (0);
-	while (i * i <= num)
-	{
-		if ((num % i) == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+int	print(char* str);
+int	insert_under_1000(char* start, char* ptr);
+#endif

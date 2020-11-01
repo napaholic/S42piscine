@@ -6,22 +6,19 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 22:24:37 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/10/31 22:45:40 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/11/01 03:36:03 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		is_sqrt(int num)
 {
-	int i;
-	int mok;
+	long long	i;
+	long long	mok;
 
 	i = 1;
 	mok = 0;
-	while (mok < num)
-	{
-		mok = i * i;
+	while (i * i < num)
 		i++;
-	}
 	return (i - 1);
 }
 

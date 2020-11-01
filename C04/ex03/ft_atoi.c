@@ -6,9 +6,12 @@
 /*   By: mjay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:32:10 by mjay              #+#    #+#             */
-/*   Updated: 2020/10/29 00:18:26 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/10/29 20:53:50 by mjay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+#include <unistd.h>
 
 char	*chkempty(char *str)
 {
@@ -46,4 +49,12 @@ int		ft_atoi(char *str)
 		str++;
 	}
 	return (i * num);
+}
+
+int main()
+{
+	int a;
+	char s[] = "  --df-234df";
+	a = ft_atoi(s);
+	printf("%d", a);
 }

@@ -1,18 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.h                                            :+:      :+:    :+:   */
+/*   Quicksort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 00:12:04 by jeonpark          #+#    #+#             */
-/*   Updated: 2020/11/01 21:08:30 by ycha             ###   ########.fr       */
+/*   Created: 2020/11/02 15:59:26 by jaewkim           #+#    #+#             */
+/*   Updated: 2020/11/02 16:01:33 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#include <stdio.h>
 
-int	print(char *str);
-int	insert_under_1000(char *start, char *ptr);
-#endif
+                                         

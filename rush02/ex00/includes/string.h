@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list.h                                             :+:      :+:    :+:   */
+/*   string.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 20:40:20 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 20:49:17 by ycha             ###   ########.fr       */
+/*   Created: 2020/11/01 20:59:01 by ycha              #+#    #+#             */
+/*   Updated: 2020/11/01 22:33:34 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIST_H
-# define LIST_H
+#ifndef FT_STRING_H
+# define FT_STRING_H
 
-typedef struct		s_list
-{
-	char			*key;
-	char			*value;
-	struct s_list	*link;
-}					t_list;
-
-t_list				*create_list(void);
-int					insert_list(t_list *head, char *key, char *value);
-char				*search_list(t_list *head, char *key);
-void				show_list(t_list *head);
+char	*ft_strdup(char *src);
+int		ft_strcmp(char *s1, char *s2);
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
 
 #endif

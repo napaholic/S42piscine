@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string.h                                           :+:      :+:    :+:   */
+/*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 20:59:01 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 20:59:33 by ycha             ###   ########.fr       */
+/*   Created: 2020/11/01 00:12:04 by jeonpark          #+#    #+#             */
+/*   Updated: 2020/11/01 22:32:40 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRING_H
-# define FT_STRING_H
+#ifndef PRINT_H
+# define PRINT_H
 
-char	*ft_strdup(char *src);
-int		ft_strcmp(char *s1, char *s2);
-void	ft_putchar(char c);
-void	ft_putnbr(int nb);
-void	ft_putstr(char *str);
+int	print(char *str);
+int	insert_under_1000(char *start, char *ptr);
 
 #endif

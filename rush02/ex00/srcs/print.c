@@ -6,19 +6,28 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:25:47 by jeonpark          #+#    #+#             */
-/*   Updated: 2020/11/01 21:32:12 by ycha             ###   ########.fr       */
+/*   Updated: 2020/11/01 22:53:32 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "print.h"
 #include "print_list.h"
 #include "print_insert_number.h"
 
+int	print_zeros(char *start, char *ptr)
+{
+	return ((start == ptr && *ptr != '0')
+			|| ((start == (ptr - 1)) && (*(ptr - 1) != '0' || *ptr != '0'))
+			|| (start <= (ptr - 2) && (*(ptr - 2) != '0'
+			|| *(ptr - 1) != '0'
+			|| *ptr != '0')));
+}
+
 int	insert_under_1000(char *start, char *ptr)
 {
-	if (!insert_thousands(ptr))
-		return (0);
+	if (print_zeros(start, ptr))
+		if (!insert_thousands(ptr))
+			return (0);
 	if (start == ptr)
 	{
 		if (*(ptr + 1) == '\0')

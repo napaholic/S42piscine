@@ -6,7 +6,7 @@
 /*   By: jeonpark <jeonpark@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 22:33:07 by jeonpark          #+#    #+#             */
-/*   Updated: 2020/11/01 21:18:19 by ycha             ###   ########.fr       */
+/*   Updated: 2020/11/01 22:51:27 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ int	insert_thousands(char *ptr)
 	char	*value;
 	char	*one;
 
-	if (*ptr == '0')
-		return (1);
 	tmp = *ptr;
 	*ptr = '1';
 	if (!(value = search(ptr)))

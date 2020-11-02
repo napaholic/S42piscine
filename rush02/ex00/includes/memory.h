@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   indexing.h                                         :+:      :+:    :+:   */
+/*   memory.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 20:50:50 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 20:56:58 by ycha             ###   ########.fr       */
+/*   Created: 2020/11/01 20:46:09 by ycha              #+#    #+#             */
+/*   Updated: 2020/11/01 22:31:00 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INDEXING_H
-# define INDEXING_H
+#ifndef MEMORY_H
+# define MEMORY_H
 
-int	indexing(char *file_name);
-int	parsing(char *str, char **key, char **value);
+typedef struct			s_mem_list
+{
+	void				*mem;
+	struct s_mem_list	*link;
+}						t_mem_list;
+
+int						ft_malloc_init(void);
+void					*ft_malloc(int size);
+void					ft_free(void);
 
 #endif

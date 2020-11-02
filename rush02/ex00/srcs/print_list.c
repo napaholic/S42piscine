@@ -6,11 +6,10 @@
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 21:11:54 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 21:29:05 by ycha             ###   ########.fr       */
+/*   Updated: 2020/11/01 22:27:36 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "print_list.h"
 #include "memory.h"
 #include "string.h"
@@ -28,6 +27,7 @@ int		create_print_list(void)
 int		insert_print_list(char *str)
 {
 	t_print_list	*ptr;
+
 	if (!(ptr = (t_print_list*)ft_malloc(sizeof(t_print_list))))
 		return (0);
 	ptr->str = str;
@@ -38,13 +38,18 @@ int		insert_print_list(char *str)
 
 void	show_print_list(void)
 {
+	int				flag;
 	t_print_list	*p;
 
+	flag = 1;
 	p = g_print_list_head;
 	while (p->link != 0)
 	{
 		p = p->link;
+		if (!flag)
+			ft_putstr(" ");
 		ft_putstr(p->str);
-		ft_putstr(" ");
+		flag = 0;
 	}
+	ft_putchar('\n');
 }

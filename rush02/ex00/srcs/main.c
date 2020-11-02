@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 16:30:59 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/11/01 22:00:35 by mjay             ###   ########.fr       */
+/*   Updated: 2020/11/01 22:24:35 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		isnumeric(char *str)
 		*str++ = '0';
 	while (is_numeric(*ptr))
 		*str++ = *ptr++;
-	if (is_space(*ptr))
+	if (is_space(*ptr) || *ptr == '\0')
 		*str = '\0';
 	while (is_space(*ptr))
 		++ptr;
@@ -57,42 +57,30 @@ int		isnumeric(char *str)
 	return (1);
 }
 
-void	name(char* dict_title, char* number)
+void	name(char *dict_title, char *number)
 {
 	if (!indexing(dict_title))
 	{
 		ft_putstr("Dict Error\n");
-		ft_free();
 		return ;
 	}
 	if (!print(number))
 	{
 		ft_putstr("Dict Error\n");
-		ft_free();
 		return ;
 	}
-	ft_free();
 }
 
 int		main(int ac, char **av)
 {
-	char* dict_title;
-	char* number;
-
 	if (!ft_malloc_init() || !create_hash())
 		ft_putstr("Error\n");
 	else if (ac == 2 && isnumeric(av[1]))
-	{
-		dict_title = "numbers.dict";
-		number = av[1];
-	}
+		name("numbers.dict", av[1]);
 	else if (ac == 3 && isnumeric(av[2]))
-	{
-		dict_title = av[1];
-		number = av[2];
-	}
+		name(av[1], av[2]);
 	else
 		ft_putstr("Error\n");
-	name(dict_title, number);
+	ft_free();
 	return (0);
 }

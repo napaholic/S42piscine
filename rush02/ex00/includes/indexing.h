@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   indexing.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 23:10:58 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/11/02 15:19:42 by jaewkim          ###   ########.fr       */
+/*   Created: 2020/11/01 20:50:50 by ycha              #+#    #+#             */
+/*   Updated: 2020/11/01 22:07:19 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		is_prime(int nb)
-{
-	long long i;
+#ifndef INDEXING_H
+# define INDEXING_H
 
-	i = 2;
-	while (i * i <= nb)
-	{
-		if (nb % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
+int	indexing(char *file_name);
+int	parsing(char *str, char **key, char **value);
 
-int		ft_find_next_prime(int nb)
-{
-	if (nb < 2)
-		nb = 2;
-	while (!is_prime(nb))
-	{
-		nb++;
-	}
-	return (nb);
-}
+#endif

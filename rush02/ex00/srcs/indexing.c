@@ -6,7 +6,7 @@
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 20:54:35 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 21:22:54 by ycha             ###   ########.fr       */
+/*   Updated: 2020/11/01 23:23:54 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 #include "data.h"
 #include "file.h"
 #include "string.h"
-
-/*
-** parse key and value
-** Return : if error 0, if success 1
-*/
 
 int	parsing_key(char *start, char **key)
 {

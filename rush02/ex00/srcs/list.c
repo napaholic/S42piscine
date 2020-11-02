@@ -6,14 +6,13 @@
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 20:36:57 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 21:30:53 by ycha             ###   ########.fr       */
+/*   Updated: 2020/11/01 22:26:19 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "list.h"
 #include "string.h"
 #include "memory.h"
-#include <stdio.h>
 
 t_list	*create_list(void)
 {
@@ -50,16 +49,4 @@ char	*search_list(t_list *head, char *key)
 			return (p->value);
 	}
 	return (0);
-}
-
-void	show_list(t_list *head)
-{
-	t_list	*p;
-
-	p = head;
-	while (p->link != 0)
-	{
-		p = p->link;
-		printf("\"%s:%s\"\n", p->key, p->value);
-	}
 }

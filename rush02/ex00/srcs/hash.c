@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hash.h                                             :+:      :+:    :+:   */
+/*   hash.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 20:28:59 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 21:22:06 by ycha             ###   ########.fr       */
+/*   Created: 2020/11/01 20:25:38 by ycha              #+#    #+#             */
+/*   Updated: 2020/11/01 22:28:33 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HASH_H
-# define HASH_H
-# define TABLE_SIZE 100
-# include "list.h"
+#include "hash.h"
+#include "list.h"
 
-int		create_hash(void);
-t_list	*search_hash(char *key);
-void	show_hash(void);
-int		hash(char *key);
+t_list	*g_hash_table[TABLE_SIZE];
 
-#endif
+int		create_hash(void)
+{
+	int i;
+
+	i = -1;
+	while (++i < TABLE_SIZE)
+		if (!(g_hash_table[i] = create_list()))
+			return (0);
+	return (1);
+}
+
+t_list	*search_hash(char *key)
+{
+	return (g_hash_table[hash(key)]);
+}
+
+int		hash(char *key)
+{
+	int num;
+
+	num = 0;
+	while (*key)
+		num += *key++;
+	return (num % TABLE_SIZE);
+}

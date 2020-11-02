@@ -6,7 +6,7 @@
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 20:20:48 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 20:22:41 by ycha             ###   ########.fr       */
+/*   Updated: 2020/11/01 23:24:10 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,10 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-/*
-** open file
-** Return : if error -1, else fd
-*/
-
 int	file_open(char *file_name)
 {
 	return (open(file_name, O_RDONLY));
 }
-
-/*
-** read line
-** Return : if error -1, if file is end 0, if success 1
-*/
 
 int	file_read_next_line(int fd, char *buf)
 {
@@ -53,11 +43,6 @@ int	file_read_next_line(int fd, char *buf)
 	*buf = '\0';
 	return (0);
 }
-
-/*
-** close file
-** Return : if error -1
-*/
 
 int	file_close(int fd)
 {

@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycha <ycha@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 20:47:14 by ycha              #+#    #+#             */
-/*   Updated: 2020/11/01 21:01:24 by ycha             ###   ########.fr       */
+/*   Created: 2020/11/01 22:28:46 by ycha              #+#    #+#             */
+/*   Updated: 2020/11/01 22:28:47 by ycha             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "memory.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 t_mem_list	*g_mem;
 
@@ -42,18 +41,6 @@ void	*ft_malloc(int size)
 		return (0);
 	}
 	return (ptr->mem);
-}
-
-void	show_mem_list(void)
-{
-	t_mem_list	*p;
-
-	p = g_mem;
-	while (p->link != 0)
-	{
-		p = p->link;
-		printf("\"%p:%p\"\n", p, p->mem);
-	}
 }
 
 void	ft_free_rec(t_mem_list *head)

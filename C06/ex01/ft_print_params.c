@@ -6,7 +6,7 @@
 /*   By: jaewkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 01:16:22 by jaewkim           #+#    #+#             */
-/*   Updated: 2020/11/01 01:37:04 by jaewkim          ###   ########.fr       */
+/*   Updated: 2020/11/03 00:26:58 by jaewkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 int		main(int ac, char **av)
 {
 	av++;
-	while(*av)
+	ac++;
+	while (*av)
 	{
-		while(**av)
+		while (**av)
 		{
 			write(1, *av, 1);
 			(*av)++;
@@ -25,4 +26,5 @@ int		main(int ac, char **av)
 		write(1, "\n", 1);
 		av++;
 	}
+	return (0);
 }

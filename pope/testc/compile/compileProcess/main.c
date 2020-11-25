@@ -1,5 +1,4 @@
 #include "adder.h"
-#include <stdio.h>
 
 int main(void)
 {

@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	const int res = add(1, 2);
+	const int res = dddd(1, 2);
 	return 0;
 }

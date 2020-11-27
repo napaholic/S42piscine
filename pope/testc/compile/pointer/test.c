@@ -29,5 +29,10 @@ int		main(int	ac, char	**av)
 	printf("nums's address : %p\n", nums);
 	printf("ptr's address : %p\n", ptr);
 	printf("nums[0]'s?' : %p", nums[0]);
-
+	printf("\n-------------------\n");
+	test = &a1;
+	printf("%p\n", test);
+	printf("%p\n", &a1);
+	char a = 97; 
+	printf("%d\n", *(int*)test);
 }

@@ -8,8 +8,8 @@ int		main(int ac, char *av[])
 
 	printf("before p's add = %p\n", p);
 	printf("before p's add = %p\n", *p);
-	printf("after p's add = %p\n", p);
-	printf("after p's add = %p\n", *(p++));
+	printf("after p's add = %p\n", p+1);
+	printf("after p's add = %p\n", *++p);
 
 	printf("-------------------------\n");
 	printf("ary's add = %p\n", ary);

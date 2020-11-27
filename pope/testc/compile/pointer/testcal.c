@@ -13,6 +13,6 @@ int main(int ac, char **av)
 	num += 1;
 
 	printf("-------------------\n");
-	nump++;
+	++nump;
 	printf("===================");
 }

@@ -1,1 +1,1 @@
-int		add(const	int	a, const	int	b);
+int		dddd(const	int	a, const	int	b);
